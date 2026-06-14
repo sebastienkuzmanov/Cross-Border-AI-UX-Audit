@@ -1,0 +1,6 @@
+{
+  "name": "cross-border-ai-ux-audit",
+  "version": "1.0.0",
+  "description": "Audit whether an AI product's UX is ready for a specific target market (a market corridor), not merely translated. Nine standards-grounded dimensions, a deterministic bilingual (EN + 中文) market-fit report, before/after rewrites, a prioritized backlog, and expert-review flags.",
+  "skills": ["./SKILL.md"]
+}

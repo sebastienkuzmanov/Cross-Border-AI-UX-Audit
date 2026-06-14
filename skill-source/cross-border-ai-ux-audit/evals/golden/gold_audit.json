@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "client": "Acme AI",
+    "product": "Acme Agent",
+    "product_type": "AI agent",
+    "source_market": "China",
+    "target_market": "English-speaking global",
+    "target_audience": "Self-serve B2B operations teams",
+    "business_goal": "Self-serve trial conversion",
+    "launch_decision": "Decide what to fix before opening a self-serve trial",
+    "playbook": "english_global",
+    "weight_profile": "default",
+    "evidence_reviewed": [
+      "landing page copy",
+      "onboarding flow",
+      "agent prompt and response",
+      "pricing page (captured screenshot)"
+    ],
+    "evidence_not_available": [
+      "full live product",
+      "analytics",
+      "support tickets"
+    ],
+    "evidence_level": "1-2",
+    "evidence_capture": {
+      "manifest": "evidence/manifest.json",
+      "pages_captured": 1
+    },
+    "assumptions": [
+      "Only the pricing page was captured live; other surfaces reviewed as pasted text."
+    ],
+    "report_languages": [
+      "en",
+      "zh"
+    ],
+    "audit_version": 1,
+    "audit_date": "2026-06-14"
+  },
+  "executive_summary": {
+    "en": "Acme Agent has a credible underlying workflow, but its English-market surface over-promises autonomy, under-explains data handling, and has accessibility gaps that will suppress trial conversion among cautious B2B buyers and expose the product on accessibility compliance. The strongest gaps are AI expectation-setting and trust/privacy at the first decision points. With scoped-capability language, a trust panel at the upload step, accessibility fixes, and outcome-specific CTAs, the product can reach trial-ready quality for this corridor.",
+    "zh": "Acme Agent 的底层工作流可信，但面向英语市场的呈现过度承诺自主性、对数据处理说明不足，且存在无障碍缺陷，会抑制谨慎型 B2B 买家的试用转化并带来无障碍合规风险。最大的差距在于 AI 预期设定与首个决策点的信任/隐私。通过有界能力表述、在上传环节加入信任面板、修复无障碍问题、以及以结果为导向的行动按钮，产品可达到该走廊下的试用就绪水平。"
+  },
+  "market_fit_score": {
+    "overall": 56,
+    "band": "Significant adaptation required before launch",
+    "dimension_scores": {
+      "language_naturalness": 72,
+      "cultural_fit": 68,
+      "trust_and_privacy": 45,
+      "ai_expectation_setting": 40,
+      "ux_clarity": 64,
+      "conversion": 58,
+      "agent_chatbot_behavior": 55,
+      "accessibility": 52,
+      "market_entry_risk": 70
+    },
+    "evidence_completeness": 58,
+    "unresolved_critical_count": 0,
+    "confidence": "medium",
+    "weight_profile": "default",
+    "score_explanation": {
+      "en": "Trust/privacy and AI expectation-setting weigh most heavily and score lowest, pulling the weighted total down; accessibility also scores below the bar. No unresolved Critical issues, so no cap is applied; medium confidence reflects partial evidence.",
+      "zh": "信任/隐私与 AI 预期设定权重最高且得分最低，拉低了加权总分；无障碍同样低于基准。无未解决的严重项，因此未触发封顶；中等置信度反映证据仅部分完整。"
+    }
+  },
+  "top_risks": [
+    {
+      "en": "Absolute autonomy claim ('handles the entire workflow') mismatches actual agent behavior and erodes buyer trust.",
+      "zh": "绝对自主性表述（“处理整个工作流”）与智能体实际行为不符，削弱买家信任。"
+    },
+    {
+      "en": "Upload step asks for data before explaining storage, training, and retention.",
+      "zh": "上传环节在未说明存储、训练与留存前即索取数据。"
+    },
+    {
+      "en": "Accessibility gaps (contrast, labels) risk excluding users and breach accessibility requirements in regulated markets.",
+      "zh": "无障碍缺陷（对比度、标签）可能将部分用户排除在外，并在受监管市场违反无障碍要求。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISSUE-1",
+      "category": "ai_expectation_setting",
+      "severity": "High",
+      "original_text": "The AI agent handles the entire workflow for you.",
+      "problem": {
+        "en": "Implies full autonomy and does not define what the agent decides, drafts, escalates, or what requires human approval.",
+        "zh": "暗示完全自主，未界定智能体可决策、起草、上报的范围，以及哪些需人工审批。"
+      },
+      "why_it_matters": {
+        "en": "Cross-border buyers are cautious about delegating decisions to an unfamiliar AI provider; an absolute claim creates an expectation/behavior mismatch and reduces trust.",
+        "zh": "跨境买家对将决策交给陌生 AI 供应商持谨慎态度；绝对表述造成预期与行为不符并降低信任。"
+      },
+      "recommendation": {
+        "en": "Replace the absolute claim with scoped-capability language; show the review queue, approval path, fallback, and escalation behavior.",
+        "zh": "用有界能力表述替代绝对表述；展示审核队列、审批路径、回退与上报机制。"
+      },
+      "rewritten_version": "The AI agent drafts recommendations, highlights risk areas, and prepares a review queue so your team can approve final copy and market decisions.",
+      "rewritten_version_language": "en",
+      "target_market_note": {
+        "en": "Autonomy claims should be tied to accountability, visible control, and an operational fallback path.",
+        "zh": "自主性表述应与问责、可见的控制权及可运行的回退路径绑定。"
+      },
+      "standard_refs": [
+        "NIST AI RMF: Accountable & Transparent",
+        "NIST AI RMF: Explainable & Interpretable"
+      ],
+      "evidence_grounding": "landing page copy",
+      "confidence": "high"
+    },
+    {
+      "id": "ISSUE-2",
+      "category": "trust_and_privacy",
+      "severity": "High",
+      "original_text": "Let AI optimize everything automatically.",
+      "problem": {
+        "en": "The upload flow requests content without explaining data use, storage, training, retention, or deletion.",
+        "zh": "上传流程索取内容，却未说明数据用途、存储、训练、留存或删除。"
+      },
+      "why_it_matters": {
+        "en": "Without a trust signal at the decision point, cautious buyers abandon before uploading, and the AI's value is never demonstrated.",
+        "zh": "决策点缺乏信任信号，谨慎买家会在上传前放弃，AI 的价值无从展示。"
+      },
+      "recommendation": {
+        "en": "Place a compact trust panel at the upload point covering data use, storage, training policy, retention, deletion, and any review requirements.",
+        "zh": "在上传点放置紧凑的信任面板，涵盖数据用途、存储、训练政策、留存、删除及任何审核要求。"
+      },
+      "rewritten_version": "Your files are processed to generate the review and are not used to train models. Stored encrypted; deleted on request. See data handling.",
+      "rewritten_version_language": "en",
+      "target_market_note": {
+        "en": "English-global buyers expect explicit model-training, retention, and provider handling before sharing data.",
+        "zh": "英语全球买家在共享数据前，期望明确的模型训练、留存与供应商处理说明。"
+      },
+      "standard_refs": [
+        "NIST AI RMF: Privacy-Enhanced",
+        "ISO 42001: data governance & transparency"
+      ],
+      "evidence_grounding": "onboarding flow",
+      "confidence": "high"
+    },
+    {
+      "id": "ISSUE-3",
+      "category": "conversion",
+      "severity": "Medium",
+      "original_text": "Contact us for more information.",
+      "problem": {
+        "en": "The CTA offers no concrete outcome and adds friction for a self-serve audience.",
+        "zh": "该行动按钮未提供具体结果，对自助型受众增加了摩擦。"
+      },
+      "why_it_matters": {
+        "en": "Vague CTAs depress conversion despite strong traffic; self-serve buyers want a low-risk, concrete next step.",
+        "zh": "通用按钮即便在高流量下也会压低转化；自助买家需要低风险、具体的下一步。"
+      },
+      "recommendation": {
+        "en": "Offer a concrete outcome such as a scoped sample review or a guided trial.",
+        "zh": "提供具体结果，如范围明确的样例评审或引导式试用。"
+      },
+      "rewritten_version": "Run a free sample review on one of your own files.",
+      "rewritten_version_language": "en",
+      "target_market_note": {
+        "en": "Workflow-first, outcome-led CTAs convert better than AI-first slogans in this corridor.",
+        "zh": "在该走廊下，以工作流和结果为导向的按钮比 AI 口号更能转化。"
+      },
+      "standard_refs": [
+        "Nielsen #2: Match between system and the real world"
+      ],
+      "evidence_grounding": "landing page copy",
+      "confidence": "medium"
+    },
+    {
+      "id": "ISSUE-4",
+      "category": "language_naturalness",
+      "severity": "Medium",
+      "original_text": "Our intelligent platform lets you go global instantly with one-click smart automation.",
+      "problem": {
+        "en": "Buzzword-dense, source-market-style AI copy ('intelligent platform', 'smart automation', 'instantly') reads as machine-translated and immature to the target category.",
+        "zh": "堆砌流行词、带源市场风格的 AI 文案（“智能平台”“智能自动化”“瞬间”）在目标品类中读起来像机器翻译且不够成熟。"
+      },
+      "why_it_matters": {
+        "en": "Broad translated AI-benefit language makes a credible product feel untrustworthy to category-literate buyers.",
+        "zh": "宽泛的翻译式 AI 收益话术会让本可信的产品在懂行买家眼中显得不可信。"
+      },
+      "recommendation": {
+        "en": "Name the workflow, input, output, user control, and limitation in target-market-native product language; cut unsupported absolutes.",
+        "zh": "用目标市场地道的产品语言写清工作流、输入、输出、用户控制与限制；删除无支撑的绝对表述。"
+      },
+      "rewritten_version": "Localize and pressure-test your product copy for a target market, then export a prioritized fix list your team can ship.",
+      "rewritten_version_language": "en",
+      "target_market_note": {
+        "en": "Scored with an MQM-style lens: terminology and style errors at major severity, plus an MQM-Chat buzzword/loanword flag.",
+        "zh": "采用 MQM 视角评估：术语与风格属重度错误，并标记 MQM-Chat 的流行词/借词问题。"
+      },
+      "standard_refs": [
+        "MQM: Terminology",
+        "MQM: Style/awkward",
+        "MQM-Chat: buzzword/loanword"
+      ],
+      "evidence_grounding": "landing page copy",
+      "confidence": "high"
+    },
+    {
+      "id": "ISSUE-5",
+      "category": "accessibility",
+      "severity": "High",
+      "original_text": "Primary CTA: light-grey text (#9AA0A6) on white; icon-only buttons in the upload toolbar with no text labels.",
+      "problem": {
+        "en": "Low text contrast and unlabeled icon-only controls fail WCAG 2.1 AA (1.4.3 Contrast, 4.1.2 Name/Role/Value), blocking low-vision and screen-reader users.",
+        "zh": "文本对比度过低、仅图标且无标签的控件不满足 WCAG 2.1 AA（1.4.3 对比度、4.1.2 名称/角色/值），阻碍低视力与读屏用户。"
+      },
+      "why_it_matters": {
+        "en": "Beyond excluding users, accessibility is legally required in several target markets (e.g. EU EN 301 549, US ADA/Section 508); gaps risk complaints, fines, and lost enterprise deals.",
+        "zh": "除排除用户外，无障碍在多个目标市场是法律要求（如欧盟 EN 301 549、美国 ADA/Section 508）；缺陷可能招致投诉、罚款并失去企业合同。"
+      },
+      "recommendation": {
+        "en": "Raise text contrast to >=4.5:1, add visible text labels (or accessible names) to icon-only controls, and run a WCAG 2.1 AA pass with assistive tech.",
+        "zh": "将文本对比度提升至 >=4.5:1，为仅图标控件添加可见文本标签（或可访问名称），并用辅助技术做一次 WCAG 2.1 AA 检查。"
+      },
+      "rewritten_version": "Primary CTA: #1A1A1A on white (contrast 16:1); upload buttons labeled 'Upload file', 'Replace', 'Remove'.",
+      "rewritten_version_language": "en",
+      "target_market_note": {
+        "en": "For any EU-facing corridor, treat WCAG 2.1 AA as the EN 301 549 / EAA baseline and flag for accessibility-compliance review.",
+        "zh": "对任何面向欧盟的走廊，将 WCAG 2.1 AA 视为 EN 301 549 / EAA 基线，并提交无障碍合规复核。"
+      },
+      "standard_refs": [
+        "WCAG 2.1 AA: 1.4.3 Contrast",
+        "WCAG 2.1 AA: 4.1.2 Name, Role, Value",
+        "EN 301 549"
+      ],
+      "evidence_grounding": "pricing page (captured)",
+      "evidence_ref": "pricing.png",
+      "confidence": "high"
+    }
+  ],
+  "backlog": [
+    {
+      "task": {
+        "en": "Define AI-agent capability boundaries and escalation language across the landing page and onboarding.",
+        "zh": "在落地页与引导流程中界定智能体能力边界与上报语言。"
+      },
+      "priority": "P1",
+      "area": "Agent Design",
+      "estimated_impact": "High",
+      "linked_issue_id": "ISSUE-1"
+    },
+    {
+      "task": {
+        "en": "Add a trust panel at the upload decision point (data use, training, retention, deletion).",
+        "zh": "在上传决策点加入信任面板（数据用途、训练、留存、删除）。"
+      },
+      "priority": "P1",
+      "area": "Trust",
+      "estimated_impact": "High",
+      "linked_issue_id": "ISSUE-2"
+    },
+    {
+      "task": {
+        "en": "Fix WCAG 2.1 AA contrast and add accessible names to icon-only controls.",
+        "zh": "修复 WCAG 2.1 AA 对比度，并为仅图标控件添加可访问名称。"
+      },
+      "priority": "P1",
+      "area": "Compliance",
+      "estimated_impact": "High",
+      "linked_issue_id": "ISSUE-5"
+    },
+    {
+      "task": {
+        "en": "Replace generic CTAs with outcome-specific actions across primary pages.",
+        "zh": "在主要页面将通用按钮替换为以结果为导向的具体动作。"
+      },
+      "priority": "P2",
+      "area": "Copy",
+      "estimated_impact": "Medium",
+      "linked_issue_id": "ISSUE-3"
+    },
+    {
+      "task": {
+        "en": "Rewrite buzzword-dense hero copy into native, workflow-first product language.",
+        "zh": "将堆砌流行词的首屏文案改写为地道、以工作流为先的产品语言。"
+      },
+      "priority": "P3",
+      "area": "Localization",
+      "estimated_impact": "Medium",
+      "linked_issue_id": "ISSUE-4"
+    }
+  ],
+  "expert_review_flags": [
+    {
+      "area": "Privacy / data transfer",
+      "reason": {
+        "en": "Cross-border processing of uploaded customer content and model-provider data handling should be reviewed by a qualified privacy expert before launch.",
+        "zh": "上传客户内容的跨境处理及模型供应商的数据处理，应在上线前由合格的隐私专家复核。"
+      }
+    },
+    {
+      "area": "Accessibility compliance (WCAG / EN 301 549 / ADA)",
+      "reason": {
+        "en": "Accessibility gaps may create legal exposure in regulated markets; a qualified accessibility specialist should run a full conformance audit, especially for EU-facing corridors under the European Accessibility Act.",
+        "zh": "无障碍缺陷可能在受监管市场带来法律风险；应由合格的无障碍专家进行完整合规审计，尤其针对受《欧洲无障碍法案》约束的面向欧盟走廊。"
+      }
+    }
+  ],
+  "next_steps": [
+    {
+      "en": "Resolve P1 agent-boundary, trust-panel, and accessibility items, then re-audit after copy and onboarding updates.",
+      "zh": "先解决 P1 的智能体边界、信任面板与无障碍项，待文案与引导更新后重新审计。"
+    },
+    {
+      "en": "Send the privacy/data-transfer and accessibility-compliance items to qualified local experts before launch.",
+      "zh": "在上线前将隐私/数据跨境与无障碍合规项交由合格的本地专家。"
+    },
+    {
+      "en": "Re-run with compare_audits.py against this version to track score and finding deltas.",
+      "zh": "用 compare_audits.py 与此版本对比，跟踪分数与发现项的变化。"
+    }
+  ],
+  "limitations": {
+    "en": "This audit is primarily text-driven; only the pricing page was captured live (Level-2), other surfaces were reviewed as pasted text (Level-1). Full live behavior, analytics, and deeper flows were not available, so behavior-level conclusions are limited. The score is a heuristic summary computed by a deterministic rubric over expert-judged per-dimension scores, not a certification or guarantee. Playbook rules are working hypotheses requiring local validation. Findings are cross-walked to external standards (NIST AI RMF, ISO 42001, MQM, WCAG/EN 301 549) for grounding, not as a compliance opinion. AI-assisted findings require human verification before client delivery.",
+    "zh": "本审计以文本为主；仅对定价页做了实时采集（L2），其他界面以粘贴文本审阅（L1）。完整实时行为、分析数据与更深流程不可得，故行为层结论有限。评分由确定性规则对专家判定的各维度分值计算而得，是启发式概览，并非认证或保证。playbook 规则为待验证的工作假设。发现项交叉对照外部标准（NIST AI RMF、ISO 42001、MQM、WCAG/EN 301 549）以增强依据，但不构成合规意见。AI 辅助发现在交付客户前需人工核验。"
+  }
+}

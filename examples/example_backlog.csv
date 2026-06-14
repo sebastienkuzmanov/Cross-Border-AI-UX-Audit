@@ -1,0 +1,6 @@
+﻿Priority,Area,Estimated impact,Task,Linked issue
+P1,Agent Design,High,Define AI-agent capability boundaries and escalation language across the landing page and onboarding.,ISSUE-1
+P1,Trust,High,"Add a trust panel at the upload decision point (data use, training, retention, deletion).",ISSUE-2
+P1,Compliance,High,Fix WCAG 2.1 AA contrast and add accessible names to icon-only controls.,ISSUE-5
+P2,Copy,Medium,Replace generic CTAs with outcome-specific actions across primary pages.,ISSUE-3
+P3,Localization,Medium,"Rewrite buzzword-dense hero copy into native, workflow-first product language.",ISSUE-4

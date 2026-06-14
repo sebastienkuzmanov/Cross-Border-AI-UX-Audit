@@ -1,0 +1,31 @@
+﻿Summary,Issue Type,Priority,Labels,Description
+Define AI-agent capability boundaries and escalation language across the landing page and onboarding.,Task,Highest,Agent-Design impact-High cross-border-ux,"Dimension: ai_expectation_setting
+Severity: High
+Problem: Implies full autonomy and does not define what the agent decides, drafts, escalates, or what requires human approval.
+Recommendation: Replace the absolute claim with scoped-capability language; show the review queue, approval path, fallback, and escalation behavior.
+Standards: NIST AI RMF: Accountable & Transparent; NIST AI RMF: Explainable & Interpretable
+Audit issue: ISSUE-1"
+"Add a trust panel at the upload decision point (data use, training, retention, deletion).",Task,Highest,Trust impact-High cross-border-ux,"Dimension: trust_and_privacy
+Severity: High
+Problem: The upload flow requests content without explaining data use, storage, training, retention, or deletion.
+Recommendation: Place a compact trust panel at the upload point covering data use, storage, training policy, retention, deletion, and any review requirements.
+Standards: NIST AI RMF: Privacy-Enhanced; ISO 42001: data governance & transparency
+Audit issue: ISSUE-2"
+Fix WCAG 2.1 AA contrast and add accessible names to icon-only controls.,Task,Highest,Compliance impact-High cross-border-ux,"Dimension: accessibility
+Severity: High
+Problem: Low text contrast and unlabeled icon-only controls fail WCAG 2.1 AA (1.4.3 Contrast, 4.1.2 Name/Role/Value), blocking low-vision and screen-reader users.
+Recommendation: Raise text contrast to >=4.5:1, add visible text labels (or accessible names) to icon-only controls, and run a WCAG 2.1 AA pass with assistive tech.
+Standards: WCAG 2.1 AA: 1.4.3 Contrast; WCAG 2.1 AA: 4.1.2 Name, Role, Value; EN 301 549
+Audit issue: ISSUE-5"
+Replace generic CTAs with outcome-specific actions across primary pages.,Task,High,Copy impact-Medium cross-border-ux,"Dimension: conversion
+Severity: Medium
+Problem: The CTA offers no concrete outcome and adds friction for a self-serve audience.
+Recommendation: Offer a concrete outcome such as a scoped sample review or a guided trial.
+Standards: Nielsen #2: Match between system and the real world
+Audit issue: ISSUE-3"
+"Rewrite buzzword-dense hero copy into native, workflow-first product language.",Task,Medium,Localization impact-Medium cross-border-ux,"Dimension: language_naturalness
+Severity: Medium
+Problem: Buzzword-dense, source-market-style AI copy ('intelligent platform', 'smart automation', 'instantly') reads as machine-translated and immature to the target category.
+Recommendation: Name the workflow, input, output, user control, and limitation in target-market-native product language; cut unsupported absolutes.
+Standards: MQM: Terminology; MQM: Style/awkward; MQM-Chat: buzzword/loanword
+Audit issue: ISSUE-4"
